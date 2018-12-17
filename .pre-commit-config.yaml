@@ -26,10 +26,3 @@ repos:
     hooks:
       - id: isort
         types: [file, python]
-        # args: [-fgw=2, -tc, -lai=2, -m=3, -up]
-        args:
-          - -fgw=2  # force_grid_wrap=2
-          - -tc     # include_trailing_comma=true
-          - -lai=2  # lines_after_imports=2
-          - -m=3    # multi_line_output=3
-          - -up     # use_parentheses=true
