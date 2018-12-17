@@ -10,17 +10,18 @@ import io
 
 def main(argv=None):
     args = parse_args(argv)
-    results = {
-        check_file(filename) for filename in args.filenames
+    dirtiness_results = {
+        check_and_report_file_blocktrans_dirtiness(filename)
+        for filename in args.filenames
     }
-    return 0 if results == {False} else 1
+    return 0 if dirtiness_results == {False} else 1
 
 
-def check_file(path):
-    result = has_dirty_blocktrans(path)
-    if result:
+def check_and_report_file_blocktrans_dirtiness(path):
+    dirty = has_dirty_blocktrans(path)
+    if dirty:
         print(path)
-    return result
+    return dirty
 
 
 def has_dirty_blocktrans(path):
