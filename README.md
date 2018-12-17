@@ -10,6 +10,8 @@ files containing a multi-line
 [`blocktrans`](https://docs.djangoproject.com/en/2.1/topics/i18n/translation/#blocktrans-template-tag)
 block but no `trimmed` directive.
 
+## Configuration
+
 Example `.pre-commit-config.yaml` entry:
 
       - repo: git@github.com:gimbo/blocktrans-trimmed-check
