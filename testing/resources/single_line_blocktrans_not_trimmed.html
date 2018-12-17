@@ -1,0 +1,8 @@
+{# Test case: single-line blocktrans block, without a "trimmed" directive #}
+
+{% for item in things %}
+  {% if item %}
+    <h1>Item</h1>
+    {% blocktrans %}A block with an {{ item }} inside it.{% endblocktrans %}
+  {% end if %}
+{% end for %}

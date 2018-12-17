@@ -1,0 +1,8 @@
+{# Test case: no blocktrans block at all #}
+
+{% for item in things %}
+  {% if item %}
+    <h1>Item</h1>
+    <p>{{ item }}</p>
+  {% end if %}
+{% end for %}

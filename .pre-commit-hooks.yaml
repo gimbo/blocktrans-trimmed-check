@@ -1,0 +1,8 @@
+---
+
+- id: blocktrans-trimmed-check
+  name: blocktrans trimmed check
+  description: check that multi-line blocktrans blocks in django templates include a "trimmed" directive
+  entry: blocktrans-trimmed-check
+  language: python
+  types: [html]

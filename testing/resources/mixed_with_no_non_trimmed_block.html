@@ -1,0 +1,22 @@
+{# Test case: multiple blocktrans blocks, including multi-line blocktrans blocks, but none without a "trimmed" directive #}
+
+{% for item in things %}
+  {% if item %}
+    <h1>Item</h1>
+
+    {% blocktrans %}A block with an {{ item }} inside it.{% endblocktrans %}
+
+    {% blocktrans trimmed %}
+      A block with an {{ item }} inside it.
+      And some more text.
+    {% endblocktrans %}
+
+    {% blocktrans %}A block with an {{ item }} inside it.{% endblocktrans %}
+
+    {% blocktrans trimmed %}
+      A block with an {{ item }} inside it.
+      And some more text.
+    {% endblocktrans %}
+
+  {% end if %}
+{% end for %}
