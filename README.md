@@ -14,7 +14,7 @@ block but no `trimmed` directive.
 
 Example `.pre-commit-config.yaml` entry:
 
-      - repo: git@github.com:gimbo/blocktrans-trimmed-check
+      - repo: https://github.com/gimbo/blocktrans-trimmed-check.git
         rev: master
         hooks:
           - id: blocktrans-trimmed-check
